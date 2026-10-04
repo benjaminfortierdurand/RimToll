@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>RimToll_TollBooth</defName>
+    <label>toll post</label>
+    <description>A plain marker planted by the roadside. Passing groups come here to settle their passage fee, coin by coin.\n\nSetting one up is expensive: word has to reach the caravan masters and the heralds that the road is paid for now. The silver comes back afterwards, group by group.\n\nWhat you build around it is your business: a guard hut, a stone arch, a concrete checkpoint with sandbags, or nothing at all. The marker can be hidden once the post is built.</description>
+    <thingClass>RimToll.Buildings.Building_TollBooth</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/PartySpot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1,1)</drawSize>
+    </graphicData>
+    <uiIconPath>UI/Commands/RimToll_Collect</uiIconPath>
+    <minifiedDef>MinifiedThing</minifiedDef>
+    <thingCategories>
+      <li>BuildingsMisc</li>
+    </thingCategories>
+    <category>Building</category>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>0</pathCost>
+    <size>(1,1)</size>
+    <rotatable>false</rotatable>
+    <useHitPoints>false</useHitPoints>
+    <selectable>true</selectable>
+    <scatterableOnMapGen>false</scatterableOnMapGen>
+    <statBases>
+      <WorkToBuild>900</WorkToBuild>
+      <Mass>5</Mass>
+    </statBases>
+    <costList>
+      <Silver>700</Silver>
+    </costList>
+    <designationCategory>Misc</designationCategory>
+    <constructionSkillPrerequisite>0</constructionSkillPrerequisite>
+    <building>
+      <isPlayerEjectable>true</isPlayerEjectable>
+      <ai_chillDestination>false</ai_chillDestination>
+      <canPlaceOverImpassablePlant>false</canPlaceOverImpassablePlant>
+      <wakeDormantPawnsOnConstruction>false</wakeDormantPawnsOnConstruction>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+    </building>
+  </ThingDef>
+
+</Defs>

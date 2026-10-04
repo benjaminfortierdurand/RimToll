@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <RimToll_MarchingArmy.label>armée en marche</RimToll_MarchingArmy.label>
+  <RimToll_MarchingArmy.letterLabel>armée en marche</RimToll_MarchingArmy.letterLabel>
+
+  <RimToll_PunitiveRaid.label>expédition punitive</RimToll_PunitiveRaid.label>
+
+  <RimToll_FalseConvoy.label>convoi suspect</RimToll_FalseConvoy.label>
+
+</LanguageData>

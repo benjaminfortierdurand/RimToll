@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <RimToll_TurnedAway.label>éconduit à un péage</RimToll_TurnedAway.label>
+  <RimToll_ArmyPassage.label>passage d'une armée</RimToll_ArmyPassage.label>
+  <RimToll_WavedThrough.label>laissé passer à un péage</RimToll_WavedThrough.label>
+
+  <RimToll_Tolled.label>a payé un péage</RimToll_Tolled.label>
+  <RimToll_Overcharged.label>a refusé un péage abusif</RimToll_Overcharged.label>
+  <RimToll_Accused.label>accusé à tort de faux papiers</RimToll_Accused.label>
+
+</LanguageData>

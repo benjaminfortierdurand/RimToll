@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Lettre de péage -->
+  <RimToll.LetterLabel>Péage : {0}</RimToll.LetterLabel>
+  <RimToll.LetterText>Un groupe de {0} se présente à votre borne de péage.\n\n{1}</RimToll.LetterText>
+  <RimToll.OptionFair>Prix raisonnable ({0} pièces d'argent)</RimToll.OptionFair>
+  <RimToll.OptionFirm>Prix ferme ({0} pièces d'argent)</RimToll.OptionFirm>
+  <RimToll.OptionGouge>Prix abusif ({0} pièces d'argent)</RimToll.OptionGouge>
+  <RimToll.OptionRefuse>Refuser le passage</RimToll.OptionRefuse>
+  <RimToll.OptionLetPass>Laisser passer</RimToll.OptionLetPass>
+
+  <!-- Description du groupe -->
+  <RimToll.StrengthWeak>Ils sont peu nombreux et mal équipés. Ils n'ont pas les moyens de discuter.</RimToll.StrengthWeak>
+  <RimToll.StrengthEven>Ils sont armés et savent se défendre. Rien d'insurmontable, rien de rassurant non plus.</RimToll.StrengthEven>
+  <RimToll.StrengthStrong>La colonne est lourdement armée. Face à eux, votre colonie ne pèse pas lourd.</RimToll.StrengthStrong>
+
+  <!-- Armée en marche -->
+  <RimToll.ArmyLetterLabel>Armée en marche : {0}</RimToll.ArmyLetterLabel>
+  <RimToll.ArmyLetterText>L'armée de {0} marche sur {1}. Leur route passe par vos terres.\n\nLe général {2} s'est détaché de la colonne et attend à votre borne. Derrière lui, {3} soldats en armes patientent.\n\nIls demandent le passage. Vous pouvez le monnayer, l'accorder, ou fermer la route. Sachez que {1} finira par apprendre ce que vous aurez décidé.</RimToll.ArmyLetterText>
+  <RimToll.MessageArmyCrossed>{0} a appris que l'armée de {1} a traversé vos terres.</RimToll.MessageArmyCrossed>
+  <RimToll.MessageArmyStopped>{0} a appris que vous avez barré la route à l'armée de {1}.</RimToll.MessageArmyStopped>
+
+  <!-- Mendiants -->
+  <RimToll.BeggarLetterLabel>Mendiants : {0}</RimToll.BeggarLetterLabel>
+  <RimToll.BeggarLetterText>Un groupe de mendiants de {0} traverse vos terres. Ils n'ont rien à payer, et ils le savent.\n\nParmi eux, {1} propose de rester travailler pour vous pendant {2} jours, contre un passage tranquille et de quoi manger.</RimToll.BeggarLetterText>
+  <RimToll.OptionDismissBeggars>Les laisser mendier</RimToll.OptionDismissBeggars>
+
+  <!-- Mémoire de la faction -->
+  <RimToll.MemoryPaidBefore>Ils ont déjà payé à cette borne. Ils s'en souviennent.</RimToll.MemoryPaidBefore>
+  <RimToll.MemoryBitter>Votre borne a une réputation chez eux, et pas la bonne. Ils s'attendent au pire.</RimToll.MemoryBitter>
+
+  <!-- Passage payé de sa personne -->
+  <RimToll.RecruitOffer>Parmi eux, {0} n'a rien à donner. Plutôt que de payer, il propose ses bras : il resterait travailler chez vous pendant {1} jours, puis reprendrait sa route.</RimToll.RecruitOffer>
+  <RimToll.OptionRecruit>Prendre {0} à votre service ({1} jours)</RimToll.OptionRecruit>
+  <RimToll.MessageRecruited>{0} quitte les siens et travaillera pour vous pendant {1} jours.</RimToll.MessageRecruited>
+  <RimToll.MessageContractOver>{0} a fait son temps chez vous et reprend la route.</RimToll.MessageContractOver>
+  <RimToll.MessageContractStays>{0} a fait son temps, mais les siens vous sont devenus hostiles. N'ayant plus où aller, il reste parmi vous.</RimToll.MessageContractStays>
+  <RimToll.ContractLeft>Reprend la route dans {0}</RimToll.ContractLeft>
+
+  <!-- Laissez-passer -->
+  <RimToll.OptionAccuse>Accuser : papiers falsifiés</RimToll.OptionAccuse>
+  <RimToll.OptionExamine>Se rendre au guichet</RimToll.OptionExamine>
+  <RimToll.OptionSendOfficer>Envoyer quelqu'un au guichet</RimToll.OptionSendOfficer>
+  <RimToll.MessageOfficerSent>{0} se rend au poste de péage.</RimToll.MessageOfficerSent>
+  <RimToll.MessageNoOfficer>Personne ne peut se rendre au poste de péage.</RimToll.MessageNoOfficer>
+  <RimToll.WindowPayInKind>Bourse vide : ils paieront en marchandises.</RimToll.WindowPayInKind>
+  <RimToll.WindowRecruit>{0} propose {1} jours de travail plutôt que de payer.</RimToll.WindowRecruit>
+  <RimToll.PassTitle>LAISSEZ-PASSER</RimToll.PassTitle>
+  <RimToll.PassHolder>Porteur</RimToll.PassHolder>
+  <RimToll.PassCount>Effectif déclaré</RimToll.PassCount>
+  <RimToll.PassReason>Motif</RimToll.PassReason>
+  <RimToll.PassPortrait>portrait du porteur</RimToll.PassPortrait>
+  <RimToll.PassShownShort>Ils présentent un laissez-passer au nom de {0}.</RimToll.PassShownShort>
+  <RimToll.PassPriceFair>Raisonnable : {0}</RimToll.PassPriceFair>
+  <RimToll.PassPriceFirm>Ferme : {0}</RimToll.PassPriceFirm>
+  <RimToll.PassPriceGouge>Abusif : {0}</RimToll.PassPriceGouge>
+  <RimToll.PassAccuse>Papiers falsifiés</RimToll.PassAccuse>
+  <RimToll.PassFooter>Délivré le {0}\npar la main du chancelier</RimToll.PassFooter>
+  <RimToll.Reason1>commerce, route de l'est</RimToll.Reason1>
+  <RimToll.Reason2>pèlerinage</RimToll.Reason2>
+  <RimToll.Reason3>retour au pays</RimToll.Reason3>
+  <RimToll.Reason4>affaires de famille</RimToll.Reason4>
+  <RimToll.Reason5>campagne militaire</RimToll.Reason5>
+  <RimToll.Reason6>fourrage et ravitaillement</RimToll.Reason6>
+  <RimToll.Reason7>redéploiement de troupes</RimToll.Reason7>
+  <RimToll.Reason8>marche vers le front</RimToll.Reason8>
+  <RimToll.FakeMonth1>Julembre</RimToll.FakeMonth1>
+  <RimToll.FakeMonth2>Octavril</RimToll.FakeMonth2>
+  <RimToll.FakeMonth3>Mairoût</RimToll.FakeMonth3>
+  <RimToll.Reveal1>Personne dans ce groupe ne répond au nom inscrit sur le papier.</RimToll.Reveal1>
+  <RimToll.Reveal2>Comptez-les vous-même : l'effectif déclaré n'a jamais collé.</RimToll.Reveal2>
+  <RimToll.Reveal3>Le portrait est celui d'un autre.</RimToll.Reveal3>
+  <RimToll.Reveal4>Ce mois n'existe sur aucun calendrier.</RimToll.Reveal4>
+  <RimToll.Reveal5>Des civils ne partent pas en campagne militaire.</RimToll.Reveal5>
+  <RimToll.Reveal6>Le chancelier scelle en rouge. Depuis toujours.</RimToll.Reveal6>
+  <RimToll.StampApproved>VISÉ</RimToll.StampApproved>
+  <RimToll.StampDenied>REFUSÉ</RimToll.StampDenied>
+  <RimToll.StampApproveTip>Prendre le tampon du visa. Cliquez ensuite sur le document pour l'apposer où bon vous semble. Clic droit pour le reposer.</RimToll.StampApproveTip>
+  <RimToll.StampDenyTip>Prendre le tampon du refus. Cliquez ensuite sur le document pour l'apposer où bon vous semble. Clic droit pour le reposer.</RimToll.StampDenyTip>
+  <RimToll.MessageUnmasked>Les papiers ne tiennent pas debout. Démasqués, ils lâchent leur barda et détalent. Dans leurs affaires abandonnées ({0} pièces d'argent de marchandises) : des croquis de votre colonie et le compte de vos défenses. Ils venaient repérer les lieux pour le compte d'autres. Ces autres-là ne viendront pas.</RimToll.MessageUnmasked>
+  <RimToll.MessageUnmaskedEmpty>Les papiers ne tiennent pas debout. Démasqués, ils détalent sans demander leur reste. Ils ne portaient rien à vendre : ils venaient compter vos défenses pour le compte d'autres. Ces autres-là ne viendront pas.</RimToll.MessageUnmaskedEmpty>
+  <RimToll.MessageWronglyAccused>Les papiers du groupe de {0} étaient parfaitement en règle. Traités de faussaires, ils repartent furieux.</RimToll.MessageWronglyAccused>
+  <RimToll.MessageBetrayed>Les gens que vous aviez laissés passer sous les couleurs de {0} connaissaient bien votre colonie. Assez pour la vendre.</RimToll.MessageBetrayed>
+
+  <!-- Paiement en nature -->
+  <RimToll.PayInKind>Leur bourse est vide. Ce qu'ils devront, ils le paieront sur ce qu'ils transportent.</RimToll.PayInKind>
+
+  <!-- Messages -->
+  <RimToll.MessageApproaching>Un groupe de {0} se dirige vers votre poste de péage.</RimToll.MessageApproaching>
+  <RimToll.MessageArmyApproaching>L'armée de {0} est entrée sur vos terres et marche vers votre poste.</RimToll.MessageArmyApproaching>
+  <RimToll.MessagePaid>Le groupe de {0} a déposé {1} pièces d'argent à la borne de péage.</RimToll.MessagePaid>
+  <RimToll.MessagePaidInKind>Le groupe de {0} a laissé au poste de péage des marchandises pour {1} pièces d'argent.</RimToll.MessagePaidInKind>
+  <RimToll.MessageAborted>Le groupe de {0} repart sans payer le péage.</RimToll.MessageAborted>
+  <RimToll.MessageRefusedPrice>Le groupe de {0} juge le péage extorqué : ils font demi-tour et quittent votre territoire.</RimToll.MessageRefusedPrice>
+  <RimToll.MessageForcedPrice>Le groupe de {0} ignore votre péage et poursuit sa route. Vous n'êtes pas en position de l'en empêcher.</RimToll.MessageForcedPrice>
+  <RimToll.MessageTurnedAway>Le groupe de {0} fait demi-tour : la route leur est fermée.</RimToll.MessageTurnedAway>
+  <RimToll.MessageForcedBarrier>Le groupe de {0} force le passage. La route est à tout le monde, semble-t-il.</RimToll.MessageForcedBarrier>
+
+  <!-- Expedition punitive -->
+  <RimToll.PunitiveLabel>Expédition punitive : {0}</RimToll.PunitiveLabel>
+  <RimToll.PunitiveText>Les {0} en ont assez de votre péage.\n\nPlutôt que de payer une fois de plus, ils ont versé une bourse à des hommes de {1} pour venir reprendre ce que vous leur avez extorqué. Ceux-ci ne viennent pas se battre : ils viennent se servir, et repartiront dès qu'ils auront de quoi.\n\nVos réserves de valeur sont à portée.</RimToll.PunitiveText>
+
+  <!-- Inspecteur -->
+  <RimToll.ReportToll>S'acquitte du péage</RimToll.ReportToll>
+
+  <!-- Borne de péage -->
+  <RimToll.BoothActive>Péage en service</RimToll.BoothActive>
+  <RimToll.BoothSuspended>Péage suspendu</RimToll.BoothSuspended>
+  <RimToll.BoothCollected>Total encaissé : {0} pièces d'argent</RimToll.BoothCollected>
+  <RimToll.GizmoToggle>Percevoir le péage</RimToll.GizmoToggle>
+  <RimToll.GizmoToggleDesc>Quand le péage est suspendu, les groupes de passage ne sont plus arrêtés à ce poste.</RimToll.GizmoToggleDesc>
+  <RimToll.GizmoShowMarker>Afficher le marqueur</RimToll.GizmoShowMarker>
+  <RimToll.GizmoShowMarkerDesc>Afficher ou masquer le marqueur. Le péage fonctionne dans les deux cas.</RimToll.GizmoShowMarkerDesc>
+  <RimToll.MarkerHidden>Marqueur masqué.</RimToll.MarkerHidden>
+
+  <!-- Options du mod -->
+  <RimToll.Settings.TollMultiplier>Multiplicateur du montant du péage</RimToll.Settings.TollMultiplier>
+  <RimToll.Settings.LetterHours>Durée de l'ultimatum (heures)</RimToll.Settings.LetterHours>
+  <RimToll.Settings.BoothCost>Coût du poste de péage (argent)</RimToll.Settings.BoothCost>
+  <RimToll.Settings.TollTravelers>Faire payer les voyageurs de passage</RimToll.Settings.TollTravelers>
+  <RimToll.Settings.TollVisitors>Faire payer les visiteurs</RimToll.Settings.TollVisitors>
+  <RimToll.Settings.TollTraders>Faire payer les caravanes marchandes</RimToll.Settings.TollTraders>
+  <RimToll.Settings.TollBeggars>Mendiants : proposer un contrat de travail</RimToll.Settings.TollBeggars>
+  <RimToll.Settings.ArmyEvent>Événement : armée en marche</RimToll.Settings.ArmyEvent>
+  <RimToll.Settings.PunitiveEvent>Événement : expédition punitive</RimToll.Settings.PunitiveEvent>
+  <RimToll.Settings.FalseConvoyEvent>Événement : convois aux papiers falsifiés</RimToll.Settings.FalseConvoyEvent>
+  <RimToll.Settings.RequireOfficer>Exiger un colon au guichet</RimToll.Settings.RequireOfficer>
+  <RimToll.Settings.RequireOfficerTip>Les papiers ne s'affichent plus d'un simple clic sur la lettre. Vous choisissez qui envoyer, il marche jusqu'au poste, et le guichet ne s'ouvre qu'à son arrivée.</RimToll.Settings.RequireOfficerTip>
+  <RimToll.Settings.Reset>Rétablir les valeurs par défaut</RimToll.Settings.Reset>
+
+</LanguageData>

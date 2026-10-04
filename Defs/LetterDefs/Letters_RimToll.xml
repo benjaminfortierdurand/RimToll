@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <LetterDef ParentName="PositiveEvent">
+    <defName>RimToll_TollDemand</defName>
+    <letterClass>RimToll.Letters.ChoiceLetter_TollDemand</letterClass>
+  </LetterDef>
+
+</Defs>

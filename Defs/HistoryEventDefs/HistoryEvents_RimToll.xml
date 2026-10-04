@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HistoryEventDef>
+    <defName>RimToll_TurnedAway</defName>
+    <label>turned away at a toll post</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RimToll_ArmyPassage</defName>
+    <label>army passage</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RimToll_WavedThrough</defName>
+    <label>waved through a toll post</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RimToll_Tolled</defName>
+    <label>paid a toll</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RimToll_Overcharged</defName>
+    <label>refused an unfair toll</label>
+  </HistoryEventDef>
+
+  <HistoryEventDef>
+    <defName>RimToll_Accused</defName>
+    <label>wrongly accused of forgery</label>
+  </HistoryEventDef>
+
+</Defs>

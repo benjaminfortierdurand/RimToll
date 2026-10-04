@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef>
+    <defName>RimToll_MarchingArmy</defName>
+    <label>army on the march</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RimToll.IncidentWorker_MarchingArmy</workerClass>
+    <baseChance>0.5</baseChance>
+    <minRefireDays>25</minRefireDays>
+    <earliestDay>12</earliestDay>
+    <letterLabel>army on the march</letterLabel>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>RimToll_PunitiveRaid</defName>
+    <label>punitive expedition</label>
+    <category>ThreatSmall</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RimToll.IncidentWorker_PunitiveRaid</workerClass>
+    <baseChance>1.0</baseChance>
+    <minRefireDays>12</minRefireDays>
+  </IncidentDef>
+
+  <IncidentDef>
+    <defName>RimToll_FalseConvoy</defName>
+    <label>suspect convoy</label>
+    <category>Misc</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>RimToll.IncidentWorker_FalseConvoy</workerClass>
+    <baseChance>0.9</baseChance>
+    <minRefireDays>8</minRefireDays>
+    <earliestDay>8</earliestDay>
+  </IncidentDef>
+
+</Defs>

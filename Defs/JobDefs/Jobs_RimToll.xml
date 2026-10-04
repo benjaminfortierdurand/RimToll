@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>RimToll_PayToll</defName>
+    <driverClass>RimToll.Jobs.JobDriver_PayToll</driverClass>
+    <reportString>dropping off the toll.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <suspendable>false</suspendable>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+
+  <JobDef>
+    <defName>RimToll_InspectPapers</defName>
+    <driverClass>RimToll.Jobs.JobDriver_InspectPapers</driverClass>
+    <reportString>going to the toll post.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <playerInterruptible>true</playerInterruptible>
+  </JobDef>
+
+</Defs>

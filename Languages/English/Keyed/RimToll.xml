@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <!-- Lettre de péage -->
+  <RimToll.LetterLabel>Toll: {0}</RimToll.LetterLabel>
+  <RimToll.LetterText>A group from {0} has stopped at your toll post.\n\n{1}</RimToll.LetterText>
+  <RimToll.OptionFair>Fair price ({0} silver)</RimToll.OptionFair>
+  <RimToll.OptionFirm>Firm price ({0} silver)</RimToll.OptionFirm>
+  <RimToll.OptionGouge>Extortionate price ({0} silver)</RimToll.OptionGouge>
+  <RimToll.OptionRefuse>Refuse passage</RimToll.OptionRefuse>
+  <RimToll.OptionLetPass>Let them pass</RimToll.OptionLetPass>
+
+  <!-- Description du groupe -->
+  <RimToll.StrengthWeak>Few of them, poorly equipped. They are in no position to argue.</RimToll.StrengthWeak>
+  <RimToll.StrengthEven>They are armed and can hold their own. Nothing you cannot handle, nothing reassuring either.</RimToll.StrengthEven>
+  <RimToll.StrengthStrong>The column is heavily armed. Against them, your colony does not count for much.</RimToll.StrengthStrong>
+
+  <!-- Armée en marche -->
+  <RimToll.ArmyLetterLabel>Army on the march: {0}</RimToll.ArmyLetterLabel>
+  <RimToll.ArmyLetterText>The army of {0} is marching on {1}. Their road runs through your land.\n\nGeneral {2} has broken off from the column and waits at your post. Behind them, {3} soldiers stand under arms.\n\nThey ask for passage. You can sell it, grant it, or close the road. Be aware that {1} will hear about whatever you decide.</RimToll.ArmyLetterText>
+  <RimToll.MessageArmyCrossed>{0} has learned that the army of {1} crossed your land.</RimToll.MessageArmyCrossed>
+  <RimToll.MessageArmyStopped>{0} has learned that you barred the road to the army of {1}.</RimToll.MessageArmyStopped>
+
+  <!-- Mendiants -->
+  <RimToll.BeggarLetterLabel>Beggars: {0}</RimToll.BeggarLetterLabel>
+  <RimToll.BeggarLetterText>A group of beggars from {0} is crossing your land. They have nothing to pay with, and they know it.\n\nOne of them, {1}, offers to stay and work for you for {2} days, in exchange for safe passage and something to eat.</RimToll.BeggarLetterText>
+  <RimToll.OptionDismissBeggars>Let them beg</RimToll.OptionDismissBeggars>
+
+  <!-- Mémoire de la faction -->
+  <RimToll.MemoryPaidBefore>They have paid at this post before. They remember.</RimToll.MemoryPaidBefore>
+  <RimToll.MemoryBitter>Your post has a reputation with them, and not a good one. They expect the worst.</RimToll.MemoryBitter>
+
+  <!-- Passage payé de sa personne -->
+  <RimToll.RecruitOffer>One of them, {0}, has nothing to give. Rather than pay, they offer their hands: they would stay and work for you for {1} days, then be on their way.</RimToll.RecruitOffer>
+  <RimToll.OptionRecruit>Take {0} into your service ({1} days)</RimToll.OptionRecruit>
+  <RimToll.MessageRecruited>{0} leaves the group and will work for you for {1} days.</RimToll.MessageRecruited>
+  <RimToll.MessageContractOver>{0} has served their time and takes to the road again.</RimToll.MessageContractOver>
+  <RimToll.MessageContractStays>{0} has served their time, but their own people have turned hostile to you. With nowhere left to go, they stay.</RimToll.MessageContractStays>
+  <RimToll.ContractLeft>Back on the road in {0}</RimToll.ContractLeft>
+
+  <!-- Laissez-passer -->
+  <RimToll.OptionAccuse>Accuse them: forged papers</RimToll.OptionAccuse>
+  <RimToll.OptionExamine>Go to the window</RimToll.OptionExamine>
+  <RimToll.OptionSendOfficer>Send someone to the window</RimToll.OptionSendOfficer>
+  <RimToll.MessageOfficerSent>{0} is heading for the toll post.</RimToll.MessageOfficerSent>
+  <RimToll.MessageNoOfficer>Nobody can reach the toll post.</RimToll.MessageNoOfficer>
+  <RimToll.WindowPayInKind>Purse empty: they will pay in goods.</RimToll.WindowPayInKind>
+  <RimToll.WindowRecruit>{0} offers {1} days of work instead of paying.</RimToll.WindowRecruit>
+  <RimToll.PassTitle>TRAVEL PASS</RimToll.PassTitle>
+  <RimToll.PassHolder>Bearer</RimToll.PassHolder>
+  <RimToll.PassCount>Declared party</RimToll.PassCount>
+  <RimToll.PassReason>Purpose</RimToll.PassReason>
+  <RimToll.PassPortrait>likeness of the bearer</RimToll.PassPortrait>
+  <RimToll.PassShownShort>They present a travel pass in the name of {0}.</RimToll.PassShownShort>
+  <RimToll.PassPriceFair>Fair: {0}</RimToll.PassPriceFair>
+  <RimToll.PassPriceFirm>Firm: {0}</RimToll.PassPriceFirm>
+  <RimToll.PassPriceGouge>Extortionate: {0}</RimToll.PassPriceGouge>
+  <RimToll.PassAccuse>Forged papers</RimToll.PassAccuse>
+  <RimToll.PassFooter>Issued {0}\nby the hand of the chancellor</RimToll.PassFooter>
+  <RimToll.Reason1>trade, eastern road</RimToll.Reason1>
+  <RimToll.Reason2>pilgrimage</RimToll.Reason2>
+  <RimToll.Reason3>returning home</RimToll.Reason3>
+  <RimToll.Reason4>family business</RimToll.Reason4>
+  <RimToll.Reason5>military campaign</RimToll.Reason5>
+  <RimToll.Reason6>foraging and resupply</RimToll.Reason6>
+  <RimToll.Reason7>troop redeployment</RimToll.Reason7>
+  <RimToll.Reason8>march to the front</RimToll.Reason8>
+  <RimToll.FakeMonth1>Julember</RimToll.FakeMonth1>
+  <RimToll.FakeMonth2>Octuary</RimToll.FakeMonth2>
+  <RimToll.FakeMonth3>Febtember</RimToll.FakeMonth3>
+  <RimToll.Reveal1>No one in that group answers to the name on the paper.</RimToll.Reveal1>
+  <RimToll.Reveal2>Count them yourself: the declared party never matched.</RimToll.Reveal2>
+  <RimToll.Reveal3>The likeness belongs to someone else entirely.</RimToll.Reveal3>
+  <RimToll.Reveal4>There is no such month on any calendar.</RimToll.Reveal4>
+  <RimToll.Reveal5>Civilians do not march to war.</RimToll.Reveal5>
+  <RimToll.Reveal6>The chancellor seals in red. Always has.</RimToll.Reveal6>
+  <RimToll.StampApproved>APPROVED</RimToll.StampApproved>
+  <RimToll.StampDenied>DENIED</RimToll.StampDenied>
+  <RimToll.StampApproveTip>Pick up the approval stamp. Then click anywhere on the document to press it down. Right click to put it back.</RimToll.StampApproveTip>
+  <RimToll.StampDenyTip>Pick up the denial stamp. Then click anywhere on the document to press it down. Right click to put it back.</RimToll.StampDenyTip>
+  <RimToll.MessageUnmasked>The papers do not hold up. Unmasked, they drop their packs and bolt. Among the things they left behind ({0} silver worth of goods): sketches of your colony and a tally of your defences. They came to scout the place for someone else. That someone is not coming.</RimToll.MessageUnmasked>
+  <RimToll.MessageUnmaskedEmpty>The papers do not hold up. Unmasked, they bolt without waiting to argue. They carried nothing worth taking: they came to count your defences for someone else. That someone is not coming.</RimToll.MessageUnmaskedEmpty>
+  <RimToll.MessageWronglyAccused>The papers of the {0} group were perfectly in order. Called forgers to their faces, they leave furious.</RimToll.MessageWronglyAccused>
+  <RimToll.MessageBetrayed>The people you waved through under the colours of {0} knew your colony well. Well enough to sell it.</RimToll.MessageBetrayed>
+
+  <!-- Paiement en nature -->
+  <RimToll.PayInKind>Their purse is empty. Whatever they owe, they will pay out of what they are carrying.</RimToll.PayInKind>
+
+  <!-- Messages -->
+  <RimToll.MessageApproaching>A group from {0} is heading for your toll post.</RimToll.MessageApproaching>
+  <RimToll.MessageArmyApproaching>The army of {0} has entered your land and is marching on your post.</RimToll.MessageArmyApproaching>
+  <RimToll.MessagePaid>The group from {0} dropped {1} silver at the toll post.</RimToll.MessagePaid>
+  <RimToll.MessagePaidInKind>The group from {0} left goods worth {1} silver at the toll post.</RimToll.MessagePaidInKind>
+  <RimToll.MessageAborted>The group from {0} is leaving without paying the toll.</RimToll.MessageAborted>
+  <RimToll.MessageRefusedPrice>The group from {0} calls your toll robbery. They turn around and leave your territory.</RimToll.MessageRefusedPrice>
+  <RimToll.MessageForcedPrice>The group from {0} ignores your toll and carries on. You are in no position to stop them.</RimToll.MessageForcedPrice>
+  <RimToll.MessageTurnedAway>The group from {0} turns around. The road is closed to them.</RimToll.MessageTurnedAway>
+  <RimToll.MessageForcedBarrier>The group from {0} forces its way through. The road belongs to everyone, apparently.</RimToll.MessageForcedBarrier>
+
+  <!-- Expedition punitive -->
+  <RimToll.PunitiveLabel>Punitive expedition: {0}</RimToll.PunitiveLabel>
+  <RimToll.PunitiveText>{0} has had enough of your toll.\n\nRather than pay you again, they have handed a purse to men of {1} to come and take back what you extorted. These ones are not here to fight: they are here to help themselves, and will leave as soon as their arms are full.\n\nYour valuables are within their reach.</RimToll.PunitiveText>
+
+  <!-- Inspecteur -->
+  <RimToll.ReportToll>Settling the toll</RimToll.ReportToll>
+
+  <!-- Borne de péage -->
+  <RimToll.BoothActive>Toll in service</RimToll.BoothActive>
+  <RimToll.BoothSuspended>Toll suspended</RimToll.BoothSuspended>
+  <RimToll.BoothCollected>Total collected: {0} silver</RimToll.BoothCollected>
+  <RimToll.GizmoToggle>Collect toll</RimToll.GizmoToggle>
+  <RimToll.GizmoToggleDesc>While the toll is suspended, passing groups are no longer stopped at this post.</RimToll.GizmoToggleDesc>
+  <RimToll.GizmoShowMarker>Show marker</RimToll.GizmoShowMarker>
+  <RimToll.GizmoShowMarkerDesc>Show or hide the marker. The toll keeps working either way.</RimToll.GizmoShowMarkerDesc>
+  <RimToll.MarkerHidden>Marker hidden.</RimToll.MarkerHidden>
+
+  <!-- Options du mod -->
+  <RimToll.Settings.TollMultiplier>Toll amount multiplier</RimToll.Settings.TollMultiplier>
+  <RimToll.Settings.LetterHours>Ultimatum duration (hours)</RimToll.Settings.LetterHours>
+  <RimToll.Settings.BoothCost>Toll post cost (silver)</RimToll.Settings.BoothCost>
+  <RimToll.Settings.TollTravelers>Charge passing travelers</RimToll.Settings.TollTravelers>
+  <RimToll.Settings.TollVisitors>Charge visitors</RimToll.Settings.TollVisitors>
+  <RimToll.Settings.TollTraders>Charge trade caravans</RimToll.Settings.TollTraders>
+  <RimToll.Settings.TollBeggars>Beggars: offer a work contract</RimToll.Settings.TollBeggars>
+  <RimToll.Settings.ArmyEvent>Event: armies on the march</RimToll.Settings.ArmyEvent>
+  <RimToll.Settings.PunitiveEvent>Event: punitive expeditions</RimToll.Settings.PunitiveEvent>
+  <RimToll.Settings.FalseConvoyEvent>Event: convoys with forged papers</RimToll.Settings.FalseConvoyEvent>
+  <RimToll.Settings.RequireOfficer>Require a colonist at the window</RimToll.Settings.RequireOfficer>
+  <RimToll.Settings.RequireOfficerTip>The papers no longer open straight from the letter. You pick who to send, they walk to the post, and the window only opens once they get there.</RimToll.Settings.RequireOfficerTip>
+  <RimToll.Settings.Reset>Reset to defaults</RimToll.Settings.Reset>
+
+</LanguageData>

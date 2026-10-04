@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>RimToll</name>
+  <author>BenFD</author>
+  <packageId>forti.rimtoll</packageId>
+  <modVersion>1.1.1</modVersion>
+  <modIconPath>UI/RimTollIcon</modIconPath>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>You hold the land. The road crosses it. The road pays.
+
+Info.
+
+Vanilla walks travelers, visitors and trade caravans across your map for free. RimToll puts a toll post on that road, and now they stop at it.
+
+Build the “Toll” spot and there you go.
+No need for a trade route or anything else, place it wherever you want, and the pawns will go to the nearest one.
+
+I intentionally made it just one spot so that everyone can take turns building (see image in the gallery).
+
+Compatibility and Performance
+Safe to add to an existing save.
+Performance friendly
+Works with Hospitality, Silk Road
+
+You can change several values in the mod's settings
+
+
+
+Enjoying RimToll? A quick thumbs up really helps. Every rating helps more people find it.
+
+
+
+Fourth mod: RimJoust for the tourney, RimSiege for war, RimFeast for peace, RimToll for the paperwork. So much for the trilogy.
+
+BenFD</description>
+</ModMetaData>
