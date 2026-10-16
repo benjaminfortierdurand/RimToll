@@ -3,7 +3,7 @@
   <name>RimToll</name>
   <author>BenFD</author>
   <packageId>forti.rimtoll</packageId>
-  <modVersion>1.1.1</modVersion>
+  <modVersion>1.1.2</modVersion>
   <modIconPath>UI/RimTollIcon</modIconPath>
   <supportedVersions>
     <li>1.6</li>
