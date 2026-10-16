@@ -119,6 +119,36 @@ namespace RimToll.Debug
 				MessageTypeDefOf.NeutralEvent, historical: false);
 		}
 
+		[DebugAction("RimToll", "End worker contracts tomorrow",
+			actionType = DebugActionType.Action,
+			allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void EndContractsTomorrow()
+		{
+			GameComponent_TollState comp = GameComponent_TollState.Instance;
+			if (comp == null) return;
+			int n = comp.EndContractsTomorrow();
+			if (n == 0) Log.Warning("[RimToll] no worker under contract.");
+		}
+
+		[DebugAction("RimToll", "Log fear at toll posts",
+			actionType = DebugActionType.Action,
+			allowedGameStates = AllowedGameStates.PlayingOnMap)]
+		private static void LogFear()
+		{
+			Map map = Find.CurrentMap;
+			if (map == null) return;
+			List<Thing> booths = map.listerThings.ThingsOfDef(RimTollDefOf.RimToll_TollBooth);
+			var sb = new StringBuilder("[RimToll] fear at toll posts:");
+			if (booths.Count == 0) sb.Append("\n  (no toll post on this map)");
+			for (int i = 0; i < booths.Count; i++)
+			{
+				float fear = TollUtility.FearAt(map, booths[i].Position);
+				sb.Append("\n  " + booths[i].Position + " | fear " + fear.ToString("F2")
+					+ (TollUtility.FearDesc(fear) != null ? " | shown in letters" : ""));
+			}
+			Log.Message(sb.ToString());
+		}
+
 		[DebugAction("RimToll", "Log toll reputation",
 			actionType = DebugActionType.Action,
 			allowedGameStates = AllowedGameStates.PlayingOnMap)]

@@ -8,6 +8,8 @@ namespace RimToll.HarmonyPatches
 	[HarmonyPatch(typeof(LordMaker), nameof(LordMaker.MakeNewLord))]
 	public static class Patch_LordMaker_MakeNewLord
 	{
+		private const string MarketShoppersJob = "RimMarket.Market.LordJob_MarketShoppers";
+
 		public static void Postfix(Lord __result, Faction faction, LordJob lordJob, Map map)
 		{
 			if (Current.ProgramState != ProgramState.Playing) return;
@@ -29,6 +31,10 @@ namespace RimToll.HarmonyPatches
 			else if (lordJob is LordJob_BegForItems)
 			{
 				if (s != null && !s.tollBeggars) return;
+			}
+			else if (lordJob?.GetType().FullName == MarketShoppersJob)
+			{
+				if (s != null && !s.tollShoppers) return;
 			}
 			else
 			{

@@ -15,6 +15,7 @@ namespace RimToll
 		public bool tollVisitors = true;
 		public bool tollTraders = true;
 		public bool tollBeggars = true;
+		public bool tollShoppers = true;
 		public bool armyEvent = true;
 		public bool punitiveEvent = true;
 		public bool falseConvoyEvent = true;
@@ -29,6 +30,7 @@ namespace RimToll
 			tollVisitors = true;
 			tollTraders = true;
 			tollBeggars = true;
+			tollShoppers = true;
 			armyEvent = true;
 			punitiveEvent = true;
 			falseConvoyEvent = true;
@@ -45,6 +47,7 @@ namespace RimToll
 			Scribe_Values.Look(ref tollVisitors, "tollVisitors", true);
 			Scribe_Values.Look(ref tollTraders, "tollTraders", true);
 			Scribe_Values.Look(ref tollBeggars, "tollBeggars", true);
+			Scribe_Values.Look(ref tollShoppers, "tollShoppers", true);
 			Scribe_Values.Look(ref armyEvent, "armyEvent", true);
 			Scribe_Values.Look(ref punitiveEvent, "punitiveEvent", true);
 			Scribe_Values.Look(ref falseConvoyEvent, "falseConvoyEvent", true);

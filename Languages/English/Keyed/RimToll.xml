@@ -26,6 +26,9 @@
   <RimToll.BeggarLetterText>A group of beggars from {0} is crossing your land. They have nothing to pay with, and they know it.\n\nOne of them, {1}, offers to stay and work for you for {2} days, in exchange for safe passage and something to eat.</RimToll.BeggarLetterText>
   <RimToll.OptionDismissBeggars>Let them beg</RimToll.OptionDismissBeggars>
 
+  <!-- Dissuasion -->
+  <RimToll.FearNotice>What you keep on display by the road has not escaped them. They will argue less, and remember more.</RimToll.FearNotice>
+
   <!-- Mémoire de la faction -->
   <RimToll.MemoryPaidBefore>They have paid at this post before. They remember.</RimToll.MemoryPaidBefore>
   <RimToll.MemoryBitter>Your post has a reputation with them, and not a good one. They expect the worst.</RimToll.MemoryBitter>
@@ -37,6 +40,10 @@
   <RimToll.MessageContractOver>{0} has served their time and takes to the road again.</RimToll.MessageContractOver>
   <RimToll.MessageContractStays>{0} has served their time, but their own people have turned hostile to you. With nowhere left to go, they stay.</RimToll.MessageContractStays>
   <RimToll.ContractLeft>Back on the road in {0}</RimToll.ContractLeft>
+  <RimToll.LetterContractEndingLabel>Contract ending: {0}</RimToll.LetterContractEndingLabel>
+  <RimToll.LetterContractEndingText>{0}'s contract ends tomorrow, then they head home.</RimToll.LetterContractEndingText>
+  <RimToll.LetterContractEndingGear>Anything of yours that {0} wears or carries gets left at the door. Only what they arrived with goes with them.</RimToll.LetterContractEndingGear>
+  <RimToll.MessageContractOverGear>{0} has served their time and takes to the road again, leaving {1} of your things behind.</RimToll.MessageContractOverGear>
 
   <!-- Laissez-passer -->
   <RimToll.OptionAccuse>Accuse them: forged papers</RimToll.OptionAccuse>
@@ -122,6 +129,7 @@
   <RimToll.Settings.TollVisitors>Charge visitors</RimToll.Settings.TollVisitors>
   <RimToll.Settings.TollTraders>Charge trade caravans</RimToll.Settings.TollTraders>
   <RimToll.Settings.TollBeggars>Beggars: offer a work contract</RimToll.Settings.TollBeggars>
+  <RimToll.Settings.TollShoppers>Charge RimMarket shoppers</RimToll.Settings.TollShoppers>
   <RimToll.Settings.ArmyEvent>Event: armies on the march</RimToll.Settings.ArmyEvent>
   <RimToll.Settings.PunitiveEvent>Event: punitive expeditions</RimToll.Settings.PunitiveEvent>
   <RimToll.Settings.FalseConvoyEvent>Event: convoys with forged papers</RimToll.Settings.FalseConvoyEvent>

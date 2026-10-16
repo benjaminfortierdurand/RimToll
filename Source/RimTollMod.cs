@@ -40,6 +40,8 @@ namespace RimToll
 			l.CheckboxLabeled("RimToll.Settings.TollVisitors".Translate(), ref Settings.tollVisitors);
 			l.CheckboxLabeled("RimToll.Settings.TollTraders".Translate(), ref Settings.tollTraders);
 			l.CheckboxLabeled("RimToll.Settings.TollBeggars".Translate(), ref Settings.tollBeggars);
+			if (ModsConfig.IsActive("forti.rimmarket"))
+				l.CheckboxLabeled("RimToll.Settings.TollShoppers".Translate(), ref Settings.tollShoppers);
 			l.GapLine();
 			l.CheckboxLabeled("RimToll.Settings.ArmyEvent".Translate(), ref Settings.armyEvent);
 			l.CheckboxLabeled("RimToll.Settings.PunitiveEvent".Translate(), ref Settings.punitiveEvent);

@@ -48,6 +48,8 @@ namespace RimToll.UI
 			{
 				float ratio = TollUtility.StrengthRatio(c.lord.ownedPawns, c.map, c.booth.Position);
 				list.Add(TollUtility.StrengthDesc(ratio));
+				string fear = TollUtility.FearDesc(TollUtility.FearAt(c.map, c.booth.Position));
+				if (fear != null) list.Add(fear);
 			}
 			if (c.payInKind) list.Add("RimToll.WindowPayInKind".Translate());
 			if (c.recruit != null && !c.recruit.Dead && c.recruit.Spawned)

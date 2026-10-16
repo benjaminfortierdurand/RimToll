@@ -174,6 +174,56 @@ namespace RimToll
 			return s;
 		}
 
+		private const float TerrorPerPrisoner = 15f;
+		private const float TerrorForFullFear = 100f;
+		private const float FearNoticeThreshold = 0.15f;
+
+		private static StatDef terrorStat;
+		private static bool terrorLooked;
+
+		private static StatDef TerrorStat
+		{
+			get
+			{
+				if (!terrorLooked)
+				{
+					terrorStat = DefDatabase<StatDef>.GetNamedSilentFail("TerrorSource");
+					terrorLooked = true;
+				}
+				return terrorStat;
+			}
+		}
+
+		public static float FearAt(Map map, IntVec3 focus)
+		{
+			if (map == null || !focus.IsValid) return 0f;
+			float radiusSq = GarrisonRadius * GarrisonRadius;
+			float terror = 0f;
+			StatDef stat = TerrorStat;
+			if (stat != null)
+			{
+				List<Building> buildings = map.listerBuildings.allBuildingsColonist;
+				for (int i = 0; i < buildings.Count; i++)
+				{
+					Building b = buildings[i];
+					if (b.def.statBases == null || !b.def.statBases.StatListContains(stat)) continue;
+					if (b.Position.DistanceToSquared(focus) > radiusSq) continue;
+					terror += b.GetStatValue(stat);
+				}
+			}
+			List<Pawn> prisoners = map.mapPawns.PrisonersOfColonySpawned;
+			for (int i = 0; i < prisoners.Count; i++)
+			{
+				if (prisoners[i].Position.DistanceToSquared(focus) <= radiusSq) terror += TerrorPerPrisoner;
+			}
+			return Mathf.Clamp01(terror / TerrorForFullFear);
+		}
+
+		public static string FearDesc(float fear)
+		{
+			return fear >= FearNoticeThreshold ? "RimToll.FearNotice".Translate().ToString() : null;
+		}
+
 		public static float StrengthRatio(List<Pawn> pawns, Map map, IntVec3 focus)
 		{
 			if (map == null) return 1f;
@@ -194,20 +244,21 @@ namespace RimToll
 			return "RimToll.MemoryBitter".Translate();
 		}
 
-		public static TollReaction DecideDemand(int level, float ratio, int goodwill, float resentment)
+		public static TollReaction DecideDemand(int level, float ratio, int goodwill, float resentment, float fear)
 		{
 			float defiance = level * 0.25f;
 			defiance += Mathf.Clamp(ratio - 1f, -0.5f, 1f) * 0.35f;
 			defiance -= goodwill / 100f * 0.2f;
 			defiance += Mathf.Min(resentment, 1.5f) * 0.3f;
+			defiance -= fear * 0.3f;
 			defiance += Rand.Range(-0.15f, 0.15f);
 			if (defiance < 0.35f) return TollReaction.Pay;
-			return ratio > 1f ? TollReaction.Force : TollReaction.TurnBack;
+			return ratio > 1f + fear * 0.6f ? TollReaction.Force : TollReaction.TurnBack;
 		}
 
-		public static TollReaction DecideRefusal(float ratio)
+		public static TollReaction DecideRefusal(float ratio, float fear)
 		{
-			return ratio > 1f + Rand.Range(-0.2f, 0.2f) ? TollReaction.Force : TollReaction.TurnBack;
+			return ratio > 1f + fear * 0.6f + Rand.Range(-0.2f, 0.2f) ? TollReaction.Force : TollReaction.TurnBack;
 		}
 
 		public static bool PayerOk(Pawn p, Lord lord)

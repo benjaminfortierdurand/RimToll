@@ -108,6 +108,7 @@ namespace RimToll
 			p.ownership?.UnclaimAll();
 			if (p.drafter != null) p.drafter.Drafted = false;
 			p.jobs?.StopAll();
+			int left = DropColonyGear(p, w.arrivedWith);
 			p.SetFaction(w.origin);
 			if (p.Spawned && !p.Downed && RCellFinder.TryFindBestExitSpot(p, out IntVec3 spot))
 			{
@@ -115,8 +116,72 @@ namespace RimToll
 				job.exitMapOnArrival = true;
 				p.jobs?.StartJob(job, JobCondition.InterruptForced);
 			}
-			Messages.Message("RimToll.MessageContractOver".Translate(p.LabelShortCap),
-				new LookTargets(p), MessageTypeDefOf.NeutralEvent);
+			string msg = left > 0
+				? "RimToll.MessageContractOverGear".Translate(p.LabelShortCap, left).Resolve()
+				: "RimToll.MessageContractOver".Translate(p.LabelShortCap).Resolve();
+			Messages.Message(msg, new LookTargets(p), MessageTypeDefOf.NeutralEvent);
+		}
+
+		private static List<int> GearIds(Pawn p)
+		{
+			var ids = new List<int>();
+			if (p.apparel != null)
+				foreach (Apparel a in p.apparel.WornApparel) ids.Add(a.thingIDNumber);
+			if (p.equipment != null)
+				foreach (ThingWithComps t in p.equipment.AllEquipmentListForReading) ids.Add(t.thingIDNumber);
+			if (p.inventory != null)
+				foreach (Thing t in p.inventory.innerContainer) ids.Add(t.thingIDNumber);
+			return ids;
+		}
+
+		private static int DropColonyGear(Pawn p, List<int> keep)
+		{
+			if (keep == null || !p.Spawned) return 0;
+			int count = 0;
+			IntVec3 at = p.Position;
+			if (p.apparel != null)
+			{
+				foreach (Apparel a in p.apparel.WornApparel.ToList())
+				{
+					if (!keep.Contains(a.thingIDNumber) && p.apparel.TryDrop(a, out _, at, forbid: false)) count++;
+				}
+			}
+			if (p.equipment != null)
+			{
+				foreach (ThingWithComps t in p.equipment.AllEquipmentListForReading.ToList())
+				{
+					if (!keep.Contains(t.thingIDNumber) && p.equipment.TryDropEquipment(t, out _, at, forbid: false)) count++;
+				}
+			}
+			if (p.inventory != null)
+			{
+				foreach (Thing t in p.inventory.innerContainer.ToList())
+				{
+					if (!keep.Contains(t.thingIDNumber) && p.inventory.innerContainer.TryDrop(t, at, p.Map, ThingPlaceMode.Near, out _)) count++;
+				}
+			}
+			return count;
+		}
+
+		private void WarnContractEnding(TollWorker w)
+		{
+			w.warned = true;
+			Pawn p = w.pawn;
+			string text = "RimToll.LetterContractEndingText".Translate(p.LabelShortCap).Resolve();
+			if (w.arrivedWith != null) text += "\n\n" + "RimToll.LetterContractEndingGear".Translate(p.LabelShortCap).Resolve();
+			Find.LetterStack.ReceiveLetter("RimToll.LetterContractEndingLabel".Translate(p.LabelShortCap),
+				text, LetterDefOf.NeutralEvent, new LookTargets(p));
+		}
+
+		public int EndContractsTomorrow()
+		{
+			int now = Find.TickManager.TicksGame;
+			for (int i = 0; i < workers.Count; i++)
+			{
+				workers[i].departTick = now + 60000;
+				workers[i].warned = false;
+			}
+			return workers.Count;
 		}
 
 		public Faction MostResentfulFaction(float minimum)
@@ -242,6 +307,8 @@ namespace RimToll
 		{
 			float ratio = TollUtility.StrengthRatio(c.lord.ownedPawns, c.map, c.booth.Position);
 			string text = "RimToll.LetterText".Translate(c.faction.Name, TollUtility.StrengthDesc(ratio));
+			string fear = TollUtility.FearDesc(TollUtility.FearAt(c.map, c.booth.Position));
+			if (fear != null) text += "\n\n" + fear;
 			if (c.payInKind) text += "\n\n" + "RimToll.PayInKind".Translate();
 			if (c.recruit != null) text += "\n\n" + "RimToll.RecruitOffer".Translate(c.recruit.LabelShortCap, c.recruitDays);
 			if (c.pass != null) text += "\n\n" + "RimToll.PassShownShort".Translate(c.pass.holderName);
@@ -254,6 +321,8 @@ namespace RimToll
 		{
 			string text = "RimToll.ArmyLetterText".Translate(c.faction.Name, c.targetFaction?.Name ?? "?",
 				c.payer?.LabelShortCap ?? "?", c.lord.ownedPawns.Count);
+			string fear = TollUtility.FearDesc(TollUtility.FearAt(c.map, c.booth.Position));
+			if (fear != null) text += "\n\n" + fear;
 			string memory = TollUtility.ResentmentDesc(ResentmentFor(c.faction));
 			if (memory != null) text += "\n\n" + memory;
 			SendLetter(c, "RimToll.ArmyLetterLabel".Translate(c.faction.Name), text);
@@ -350,7 +419,8 @@ namespace RimToll
 			float ratio = TollUtility.StrengthRatio(c.lord.ownedPawns, c.map, c.booth?.Position ?? IntVec3.Invalid);
 			int goodwill = c.faction?.PlayerGoodwill ?? 0;
 			float resentment = ResentmentFor(c.faction);
-			switch (TollUtility.DecideDemand(level, ratio, goodwill, resentment))
+			c.fear = TollUtility.FearAt(c.map, c.booth?.Position ?? IntVec3.Invalid);
+			switch (TollUtility.DecideDemand(level, ratio, goodwill, resentment, c.fear))
 			{
 				case TollReaction.Pay:
 					c.state = TollCase.Paying;
@@ -388,7 +458,8 @@ namespace RimToll
 				return;
 			}
 			float ratio = TollUtility.StrengthRatio(c.lord.ownedPawns, c.map, c.booth?.Position ?? IntVec3.Invalid);
-			if (TollUtility.DecideRefusal(ratio) == TollReaction.Force)
+			float fear = TollUtility.FearAt(c.map, c.booth?.Position ?? IntVec3.Invalid);
+			if (TollUtility.DecideRefusal(ratio, fear) == TollReaction.Force)
 			{
 				Announce(c, "RimToll.MessageForcedBarrier");
 				ArmyOutcome(c, crossed: true, targetDelta: -8, armyDelta: 0);
@@ -426,6 +497,7 @@ namespace RimToll
 				pawn = joiner,
 				origin = origin,
 				departTick = Find.TickManager.TicksGame + days * 60000,
+				arrivedWith = GearIds(joiner),
 			});
 			if (RimTollDefOf.RimToll_UnderContract != null && joiner.health?.hediffSet != null
 				&& !joiner.health.hediffSet.HasHediff(RimTollDefOf.RimToll_UnderContract))
@@ -633,7 +705,7 @@ namespace RimToll
 			float resentment = ResentmentFor(c.faction);
 			int malus = Mathf.RoundToInt(c.demandLevel * 1.5f + resentment * 4f);
 			if (malus > 0) Sour(c, malus, RimTollDefOf.RimToll_Tolled);
-			Remember(c, 0.08f + c.demandLevel * 0.14f);
+			Remember(c, 0.08f + c.demandLevel * 0.14f + c.fear * 0.15f);
 			totalCollected += c.amount;
 			FactionTollMemory m = MemoryFor(c.faction, createIfMissing: false);
 			if (m != null)
@@ -700,8 +772,10 @@ namespace RimToll
 			{
 				TollWorker w = workers[i];
 				if (!w.Valid) { workers.RemoveAt(i); continue; }
+				if (!w.warned && now >= w.departTick - 60000) WarnContractEnding(w);
 				if (now >= w.departTick)
 				{
+					if (!w.pawn.Spawned) continue;
 					ReleaseWorker(w);
 					workers.RemoveAt(i);
 				}

@@ -32,6 +32,7 @@ namespace RimToll
 		public int baseAmount;
 		public int amount;
 		public int demandLevel;
+		public float fear;
 		public int deadlineTick;
 
 		public bool LordAlive => lord != null && lord.ownedPawns.Count > 0;
@@ -63,6 +64,7 @@ namespace RimToll
 			Scribe_Values.Look(ref baseAmount, "baseAmount");
 			Scribe_Values.Look(ref amount, "amount");
 			Scribe_Values.Look(ref demandLevel, "demandLevel");
+			Scribe_Values.Look(ref fear, "fear");
 			Scribe_Values.Look(ref deadlineTick, "deadlineTick");
 			if (Scribe.mode == LoadSaveMode.PostLoadInit && stamps == null) stamps = new List<TollStampMark>();
 		}

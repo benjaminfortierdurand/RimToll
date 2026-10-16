@@ -26,6 +26,9 @@
   <RimToll.BeggarLetterText>Un groupe de mendiants de {0} traverse vos terres. Ils n'ont rien à payer, et ils le savent.\n\nParmi eux, {1} propose de rester travailler pour vous pendant {2} jours, contre un passage tranquille et de quoi manger.</RimToll.BeggarLetterText>
   <RimToll.OptionDismissBeggars>Les laisser mendier</RimToll.OptionDismissBeggars>
 
+  <!-- Dissuasion -->
+  <RimToll.FearNotice>Ce que vous exposez au bord de la route n'a pas échappé à leur regard. Ils discuteront moins, mais ils s'en souviendront.</RimToll.FearNotice>
+
   <!-- Mémoire de la faction -->
   <RimToll.MemoryPaidBefore>Ils ont déjà payé à cette borne. Ils s'en souviennent.</RimToll.MemoryPaidBefore>
   <RimToll.MemoryBitter>Votre borne a une réputation chez eux, et pas la bonne. Ils s'attendent au pire.</RimToll.MemoryBitter>
@@ -37,6 +40,10 @@
   <RimToll.MessageContractOver>{0} a fait son temps chez vous et reprend la route.</RimToll.MessageContractOver>
   <RimToll.MessageContractStays>{0} a fait son temps, mais les siens vous sont devenus hostiles. N'ayant plus où aller, il reste parmi vous.</RimToll.MessageContractStays>
   <RimToll.ContractLeft>Reprend la route dans {0}</RimToll.ContractLeft>
+  <RimToll.LetterContractEndingLabel>Fin de contrat : {0}</RimToll.LetterContractEndingLabel>
+  <RimToll.LetterContractEndingText>Le contrat de {0} se termine demain. Ensuite, retour chez les siens.</RimToll.LetterContractEndingText>
+  <RimToll.LetterContractEndingGear>Tout ce qui appartient à la colonie et que {0} porte sur soi restera sur place. Seules les affaires apportées à l'arrivée partiront avec.</RimToll.LetterContractEndingGear>
+  <RimToll.MessageContractOverGear>{0} a fait son temps chez vous et reprend la route. {1} objet(s) de la colonie laissé(s) sur place.</RimToll.MessageContractOverGear>
 
   <!-- Laissez-passer -->
   <RimToll.OptionAccuse>Accuser : papiers falsifiés</RimToll.OptionAccuse>
@@ -122,6 +129,7 @@
   <RimToll.Settings.TollVisitors>Faire payer les visiteurs</RimToll.Settings.TollVisitors>
   <RimToll.Settings.TollTraders>Faire payer les caravanes marchandes</RimToll.Settings.TollTraders>
   <RimToll.Settings.TollBeggars>Mendiants : proposer un contrat de travail</RimToll.Settings.TollBeggars>
+  <RimToll.Settings.TollShoppers>Faire payer les clients de RimMarket</RimToll.Settings.TollShoppers>
   <RimToll.Settings.ArmyEvent>Événement : armée en marche</RimToll.Settings.ArmyEvent>
   <RimToll.Settings.PunitiveEvent>Événement : expédition punitive</RimToll.Settings.PunitiveEvent>
   <RimToll.Settings.FalseConvoyEvent>Événement : convois aux papiers falsifiés</RimToll.Settings.FalseConvoyEvent>
